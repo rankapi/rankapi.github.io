@@ -345,6 +345,139 @@
         .waitlist-note { margin-top: 20px; font-size: 0.75rem; color: var(--muted); letter-spacing: 0.05em; }
         .founder-note { text-align: center; color: var(--muted); font-size: 0.8rem; margin-bottom: 40px; font-style: italic; }
 
+        /* MODAL */
+        .modal-backdrop {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 200;
+            background: rgba(8,11,16,0.85);
+            backdrop-filter: blur(4px);
+            justify-content: center;
+            align-items: center;
+            animation: fadeIn 0.2s ease-out;
+        }
+        .modal-backdrop.active { display: flex; }
+
+        .modal-box {
+            background: var(--bg2);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            width: 100%;
+            max-width: 480px;
+            margin: 20px;
+            padding: 40px 36px;
+            position: relative;
+            animation: scaleIn 0.2s ease-out;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            background: none;
+            border: none;
+            color: var(--muted);
+            font-size: 1.2rem;
+            cursor: pointer;
+            line-height: 1;
+            padding: 4px;
+            transition: color 0.2s;
+        }
+        .modal-close:hover { color: var(--text); }
+
+        .modal-title {
+            font-family: 'Syne', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            margin-bottom: 8px;
+        }
+
+        .modal-subtitle {
+            color: var(--muted);
+            font-size: 0.85rem;
+            line-height: 1.6;
+            margin-bottom: 32px;
+        }
+
+        .form-group { margin-bottom: 20px; }
+        .form-label {
+            display: block;
+            font-size: 0.7rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-bottom: 8px;
+        }
+        .form-input, .form-select {
+            width: 100%;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            color: var(--text);
+            font-family: 'DM Mono', monospace;
+            font-size: 0.85rem;
+            padding: 12px 14px;
+            transition: border-color 0.2s, box-shadow 0.2s;
+            outline: none;
+        }
+        .form-input:focus, .form-select:focus {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(29,78,216,0.3);
+        }
+        .form-select { cursor: pointer; appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%2364748b' d='M6 8L1 3h10z'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 12px center; padding-right: 36px; }
+
+        .form-submit {
+            width: 100%;
+            background: #4B8BF5;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-family: 'Syne', sans-serif;
+            font-weight: 700;
+            font-size: 0.95rem;
+            padding: 16px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            margin-top: 8px;
+        }
+        .form-submit:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(29,78,216,0.4); }
+
+        .form-error {
+            color: var(--danger);
+            font-size: 0.8rem;
+            margin-top: 12px;
+            display: none;
+        }
+        .form-error.visible { display: block; }
+
+        .form-success {
+            display: none;
+            text-align: center;
+            padding: 20px 0;
+        }
+        .form-success.visible { display: block; }
+        .form-success-icon { font-size: 2.5rem; margin-bottom: 16px; }
+        .form-success-text { font-family: 'Syne', sans-serif; font-size: 1.1rem; font-weight: 700; margin-bottom: 8px; }
+        .form-success-sub { color: var(--muted); font-size: 0.85rem; }
+        .form-success-close {
+            background: transparent;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            color: var(--text);
+            font-family: 'DM Mono', monospace;
+            font-size: 0.8rem;
+            padding: 10px 24px;
+            margin-top: 24px;
+            cursor: pointer;
+            transition: border-color 0.2s;
+        }
+        .form-success-close:hover { border-color: #4B8BF5; }
+
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        @keyframes scaleIn { from { opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }
+
         footer { border-top: 1px solid var(--border); padding: 32px 40px; display: flex; justify-content: space-between; align-items: center; color: var(--muted); font-size: 0.78rem; flex-wrap: wrap; gap: 12px; }
         .footer-logo { font-family: 'Syne', sans-serif; font-weight: 700; }
         .footer-logo .rank { color: #4B8BF5; }
@@ -382,7 +515,7 @@
         <h1>Is your API <em>invisible</em> to AI assistants?</h1>
         <p>When developers ask ChatGPT or Claude for the best API in your category, your competitors show up. You don't. RankAPI shows you why and helps you fix it.</p>
         <div class="hero-cta">
-            <a href="https://bit.ly/rankapi-audit" class="btn-primary">Reserve your free audit →</a>
+            <a href="#" class="btn-primary modal-trigger">Reserve your free audit →</a>
         </div>
 
         <div class="report-wrap">
@@ -557,16 +690,112 @@
         <div class="cta-box">
             <h2>Think your API is visible?</h2>
             <p>Join the early access list for your free API visibility audit. Limited spots available for early users.</p>
-            <a href="https://bit.ly/rankapi-audit" class="btn-primary">Join the waitlist →</a>
+            <button class="btn-primary modal-trigger">Join the waitlist →</button>
             <div class="waitlist-note">Free for early users. Paid plans start soon.</div>
         </div>
     </section>
 </main>
 
+<!-- AUDIT MODAL -->
+<div class="modal-backdrop" id="auditModal">
+    <div class="modal-box">
+        <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
+        <div class="modal-form-wrap">
+            <div class="modal-title">Get your free audit</div>
+            <div class="modal-subtitle">Is your API invisible in AI chat responses? Get your free visibility audit.</div>
+            <form id="auditForm" action="https://formspree.io/f/xbdqbyzb" method="POST">
+                <div class="form-group">
+                    <label class="form-label" for="name">Your name</label>
+                    <input class="form-input" type="text" id="name" name="name" required placeholder="Alex Chen">
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="email">Email address</label>
+                    <input class="form-input" type="email" id="email" name="email" required placeholder="alex@company.com">
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="apiName">API name</label>
+                    <input class="form-input" type="text" id="apiName" name="apiName" required placeholder="Stripe">
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="apiWebsite">API website</label>
+                    <input class="form-input" type="url" id="apiWebsite" name="apiWebsite" required placeholder="https://stripe.com">
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="primaryGoal">Primary goal</label>
+                    <select class="form-select" id="primaryGoal" name="primaryGoal" required>
+                        <option value="" disabled selected>Select your goal</option>
+                        <option value="increase-visibility">Increase visibility</option>
+                        <option value="benchmark-competitors">Benchmark competitors</option>
+                        <option value="improve-positioning">Improve positioning</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="referralSource">How did you hear about us?</label>
+                    <select class="form-select" id="referralSource" name="referralSource">
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="google">Google</option>
+                        <option value="ai-recommendation">AI recommendation</option>
+                        <option value="twitter">Twitter / X</option>
+                        <option value="linkedin">LinkedIn</option>
+                        <option value="word-of-mouth">Word of mouth</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <button type="submit" class="form-submit">Request my free audit →</button>
+                <div class="form-error" id="formError">Something went wrong. Please try again.</div>
+            </form>
+        </div>
+        <div class="form-success" id="formSuccess">
+            <div class="form-success-icon">✓</div>
+            <div class="form-success-text">Thanks! We'll be in touch.</div>
+            <div class="form-success-sub">Check your inbox — your audit request is confirmed.</div>
+            <button class="form-success-close" id="successClose">Close</button>
+        </div>
+    </div>
+</div>
+
 <footer>
     <div class="footer-logo"><span class="rank">Rank</span><span class="api">API</span></div>
     <div>rankapi.github.io</div>
 </footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const modal = document.getElementById('auditModal');
+    const modalClose = document.getElementById('modalClose');
+    const successClose = document.getElementById('successClose');
+    const form = document.getElementById('auditForm');
+    const formError = document.getElementById('formError');
+    const formSuccess = document.getElementById('formSuccess');
+    const formWrap = document.querySelector('.modal-form-wrap');
+    const triggers = document.querySelectorAll('.modal-trigger');
+
+    function openModal() { modal.classList.add('active'); document.body.style.overflow = 'hidden'; }
+    function closeModal() { modal.classList.remove('active'); document.body.style.overflow = ''; formError.classList.remove('visible'); }
+
+    triggers.forEach(function(t) { t.addEventListener('click', function(e) { e.preventDefault(); openModal(); }); });
+    modalClose.addEventListener('click', closeModal);
+    modal.addEventListener('click', function(e) { if (e.target === modal) closeModal(); });
+    successClose.addEventListener('click', closeModal);
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && modal.classList.contains('active')) closeModal(); });
+
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        formError.classList.remove('visible');
+        const data = new FormData(form);
+        fetch(form.action, { method: 'POST', body: data, headers: { 'Accept': 'application/json' } })
+            .then(function(response) {
+                if (response.ok) {
+                    formWrap.style.display = 'none';
+                    formSuccess.classList.add('visible');
+                } else {
+                    formError.classList.add('visible');
+                }
+            })
+            .catch(function() { formError.classList.add('visible'); });
+    });
+});
+</script>
 
 </body>
 </html>
