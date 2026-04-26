@@ -408,7 +408,14 @@
             font-size: 1.5rem;
             font-weight: 800;
             letter-spacing: -0.02em;
-            margin-bottom: 8px;
+            margin-bottom: 4px;
+        }
+
+        .modal-trust {
+            font-size: 0.75rem;
+            color: var(--muted);
+            margin-bottom: 20px;
+            font-style: italic;
         }
 
         .modal-subtitle {
@@ -783,8 +790,9 @@
         <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
         <div class="modal-form-wrap">
             <div class="modal-title">Get your AI Visibility Report</div>
-            <div class="modal-subtitle">$99 for the first 5 early adopters — includes 50% lifetime discount on all future RankAPI products.</div>
-            <form id="auditForm" action="https://formspree.io/f/xbdqbyzb" method="POST">
+            <div class="modal-trust">Trusted by API founders improving their AI visibility.</div>
+            <div class="modal-subtitle">$99 for the first 5 early adopters. Includes a 50% lifetime discount on all future RankAPI products.</div>
+            <form id="auditForm" action="https://formspree.io/f/xbdqbyzb" method="POST" autocomplete="off">
                 <div class="form-group">
                     <label class="form-label" for="name">Your name</label>
                     <input class="form-input" type="text" id="name" name="name" required placeholder="Alex Chen">
@@ -834,8 +842,8 @@
         </div>
         <div class="form-success" id="formSuccess">
             <div class="form-success-icon">✓</div>
-            <div class="form-success-text">You're in. Check your inbox.</div>
-            <div class="form-success-sub">I'll personally email you within 24 hours with the next steps to secure your early adopter spot.</div>
+            <div class="form-success-text">You're in! Check your inbox.</div>
+            <div class="form-success-sub">Your early adopter spot is waiting — I'll email you within 24 hours with next steps.</div>
             <button class="form-success-close" id="successClose">Close</button>
         </div>
     </div>
