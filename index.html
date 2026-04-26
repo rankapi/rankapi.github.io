@@ -274,6 +274,7 @@
 
         .score-trend { font-size: 0.72rem; font-weight: 600; display: flex; align-items: center; gap: 4px; }
         .trend-up { color: #10b981; }
+        .trend-down { color: #ef4444; }
         .trend-same { color: #94a3b8; }
 
         .email-section-title { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #94a3b8; margin-bottom: 12px; margin-top: 20px; }
@@ -564,7 +565,7 @@
                     </div>
 
                     <div class="email-title">Your Payments API</div>
-                    <div class="email-subtitle">Visibility across Claude · ChatGPT · Gemini — last 24 hours</div>
+                    <div class="email-subtitle">Visibility across Claude · ChatGPT · Gemini · Perplexity — last 24 hours</div>
 
                     <div class="score-grid">
                         <div class="score-card">
@@ -577,11 +578,27 @@
                         </div>
                         <div class="score-card">
                             <div class="score-card-label">
+                                <span class="ai-dot" style="background:#1daa19;"></span>
+                                ChatGPT
+                            </div>
+                            <div class="score-value">15%</div>
+                            <div class="score-trend trend-up">↑ +5% from yesterday</div>
+                        </div>
+                        <div class="score-card">
+                            <div class="score-card-label">
                                 <span class="ai-dot" style="background:#1a73e8;"></span>
                                 Gemini
                             </div>
                             <div class="score-value">10%</div>
                             <div class="score-trend trend-same">→ unchanged</div>
+                        </div>
+                        <div class="score-card">
+                            <div class="score-card-label">
+                                <span class="ai-dot" style="background:#e53e3e;"></span>
+                                Perplexity
+                            </div>
+                            <div class="score-value">5%</div>
+                            <div class="score-trend trend-down">↓ -3% from yesterday</div>
                         </div>
                     </div>
 
