@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your report is delivered — RankAPI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body { margin: 0; padding: 0; background: #f8fafc; font-family: 'Inter', sans-serif; }
+        .email-wrap { max-width: 560px; margin: 40px auto; background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 24px rgba(0,0,0,0.08); }
+        .email-header { padding: 32px 40px 24px; border-bottom: 1px solid #f1f5f9; display: flex; justify-content: space-between; align-items: center; }
+        .email-logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.3rem; color: #0f172a; }
+        .email-logo .rank { color: #4B8BF5; }
+        .email-logo .api { color: #D97706; }
+        .email-body { padding: 36px 40px; }
+        .email-body h1 { font-family: 'Syne', sans-serif; font-size: 1.5rem; font-weight: 800; color: #0f172a; margin: 0 0 12px; letter-spacing: -0.02em; }
+        .email-body p { font-size: 0.92rem; color: #334155; line-height: 1.75; margin: 0 0 20px; }
+        .email-body p:last-child { margin-bottom: 0; }
+        .highlight { background: linear-gradient(135deg, #eff6ff, #dbeafe); border: 1px solid #bfdbfe; border-radius: 8px; padding: 20px 24px; margin: 28px 0; }
+        .highlight-label { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #1d4ed8; margin-bottom: 8px; }
+        .highlight-text { font-size: 0.9rem; color: #0f172a; line-height: 1.6; }
+        .feedback-section { margin: 32px 0; }
+        .feedback-title { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1rem; color: #0f172a; margin-bottom: 12px; }
+        .feedback-list { list-style: none; padding: 0; margin: 0 0 24px; }
+        .feedback-list li { font-size: 0.85rem; color: #334155; padding: 8px 0; border-bottom: 1px solid #f1f5f9; display: flex; align-items: flex-start; gap: 10px; }
+        .feedback-list li:last-child { border-bottom: none; }
+        .feedback-check { color: #4B8BF5; font-weight: 700; }
+        .cta-wrap { text-align: center; margin: 28px 0; }
+        .cta-btn { display: inline-block; background: #4B8BF5; color: #fff; font-family: 'Syne', sans-serif; font-weight: 700; font-size: 0.95rem; padding: 14px 36px; border-radius: 6px; text-decoration: none; }
+        .cta-btn:hover { background: #3b7ae8; }
+        .email-footer { padding: 20px 40px; border-top: 1px solid #f1f5f9; font-size: 0.72rem; color: #94a3b8; text-align: center; }
+        @media (max-width: 600px) {
+            .email-wrap { margin: 20px; }
+            .email-header, .email-body, .email-footer { padding-left: 24px; padding-right: 24px; }
+        }
+    </style>
+</head>
+<body>
+<div class="email-wrap">
+    <div class="email-header">
+        <div class="email-logo"><span class="rank">Rank</span><span class="api">API</span></div>
+    </div>
+    <div class="email-body">
+        <h1>Your AI Visibility Report is in, {{name}}.</h1>
+        <p>Hope the report gave you some useful stuff to work with. I put a good chunk of time into tailoring it to {{apiName}}, so I hope it lands well.</p>
+        <div class="highlight">
+            <div class="highlight-label">Quick reminder</div>
+            <div class="highlight-text">You locked in the early adopter price ($99) and a <strong>50% lifetime discount</strong> on all future RankAPI products — even after your plan renews or we expand.</div>
+        </div>
+        <div class="feedback-section">
+            <div class="feedback-title">If you have 5 minutes, I'd love your take</div>
+            <p style="font-size:0.85rem; color:#64748b; margin-bottom:16px;">No pressure — but genuine feedback early on shapes what this product becomes:</p>
+            <ul class="feedback-list">
+                <li><span class="feedback-check">✓</span> What was most useful in the report?</li>
+                <li><span class="feedback-check">✓</span> What felt missing or underdeveloped?</li>
+                <li><span class="feedback-check">✓</span> Would you recommend RankAPI to a peer? Why or why not?</li>
+            </ul>
+            <div class="cta-wrap">
+                <a href="mailto:daniel@rankapi.ai?subject=Early%20adopter%20feedback" class="cta-btn">Share your thoughts</a>
+            </div>
+            <p style="font-size:0.82rem; color:#94a3b8; text-align:center;">Or just reply to this email — I read every reply personally.</p>
+        </div>
+        <p>Thanks for being part of the first group. Means a lot.</p>
+        <p>— Daniel<br>RankAPI</p>
+    </div>
+    <div class="email-footer">
+        RankAPI · rankapi.ai
+    </div>
+</div>
+</body>
+</html>
