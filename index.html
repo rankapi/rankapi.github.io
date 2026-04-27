@@ -149,6 +149,15 @@
             animation: fadeUp 0.8s ease forwards 0.8s;
         }
 
+        .hero-credibility {
+            font-size: 0.8rem;
+            color: var(--muted);
+            margin-top: 24px;
+            font-style: italic;
+            opacity: 0;
+            animation: fadeUp 0.8s ease forwards 1s;
+        }
+
         .btn-primary {
             background: #4B8BF5;
             color: #fff;
@@ -412,14 +421,7 @@
             font-size: 1.5rem;
             font-weight: 800;
             letter-spacing: -0.02em;
-            margin-bottom: 4px;
-        }
-
-        .modal-trust {
-            font-size: 0.75rem;
-            color: var(--muted);
-            margin-bottom: 20px;
-            font-style: italic;
+            margin-bottom: 12px;
         }
 
         .modal-subtitle {
@@ -553,151 +555,23 @@
 
 <nav>
     <div class="logo"><span class="rank">Rank</span><span class="api">API</span></div>
-    <div class="nav-badge">Early Access</div>
 </nav>
 
 <main>
     <section class="hero">
-        <div class="hero-eyebrow">AI Visibility Intelligence</div>
-        <h1>Get your AI Visibility Report<br><em style="color: #4B8BF5; font-size: 0.6em;">$199 — Early adopters pay $99</em></h1>
-        <p>First 5 users get the full report + <strong>50% lifetime discount</strong> on every future RankAPI product. After that, price returns to $199.</p>
+        <div class="hero-eyebrow">API Visibility Intelligence</div>
+        <h1>Get your personalized<br><em>AI Visibility Report.</em></h1>
+        <p>Discover exactly how visible your API is across AI assistants like ChatGPT, Claude, and Gemini. Delivered personally within 48 hours.</p>
         <div class="hero-cta">
-            <a href="#" class="btn-primary modal-trigger">Join Early Access (Only 5 Spots)</a>
+            <a href="#" class="btn-primary modal-trigger">Order your report for $99</a>
         </div>
-
-        <div class="report-wrap">
-            <div class="report-label">📬 You'll receive a fresh report every day.</div>
-            <div class="email-chrome">
-                <div class="email-chrome-bar">
-                    <div class="dot dot-r"></div>
-                    <div class="dot dot-y"></div>
-                    <div class="dot dot-g"></div>
-                    <div class="email-chrome-title">📧 Inbox — rankapi.ai</div>
-                </div>
-                <div class="email-meta">
-                    <div><strong>From:</strong> RankAPI Reports &lt;reports@rankapi.ai&gt;</div>
-                    <div><strong>Subject:</strong> 📊 Your API Visibility Report — April 17, 2026</div>
-                    <div><strong>To:</strong> you@yourcompany.com</div>
-                </div>
-                <div class="email-body">
-                    <div class="email-header">
-                        <div>
-                            <div class="email-logo"><span class="rank">Rank</span><span class="api">API</span></div>
-                            <div style="font-size:0.7rem;color:#94a3b8;margin-top:2px;">Daily Visibility Report</div>
-                        </div>
-                        <div class="email-date">
-                            April 17, 2026<br>
-                            <span style="color:#10b981;font-weight:600;">↑ Improving</span>
-                        </div>
-                    </div>
-
-                    <div class="email-title">Your Payments API</div>
-                    <div class="email-subtitle">Visibility across Claude · ChatGPT · Gemini · Perplexity — last 24 hours</div>
-
-                    <div class="score-grid">
-                        <div class="score-card">
-                            <div class="score-card-label">
-                                <span class="ai-dot" style="background:#7c3aed;"></span>
-                                Claude
-                            </div>
-                            <div class="score-value">20%</div>
-                            <div class="score-trend trend-up">↑ +10% from yesterday</div>
-                        </div>
-                        <div class="score-card">
-                            <div class="score-card-label">
-                                <span class="ai-dot" style="background:#1daa19;"></span>
-                                ChatGPT
-                            </div>
-                            <div class="score-value">15%</div>
-                            <div class="score-trend trend-up">↑ +5% from yesterday</div>
-                        </div>
-                        <div class="score-card">
-                            <div class="score-card-label">
-                                <span class="ai-dot" style="background:#1a73e8;"></span>
-                                Gemini
-                            </div>
-                            <div class="score-value">10%</div>
-                            <div class="score-trend trend-same">→ unchanged</div>
-                        </div>
-                        <div class="score-card">
-                            <div class="score-card-label">
-                                <span class="ai-dot" style="background:#e53e3e;"></span>
-                                Perplexity
-                            </div>
-                            <div class="score-value">5%</div>
-                            <div class="score-trend trend-down">↓ -3% from yesterday</div>
-                        </div>
-                    </div>
-
-                    <div class="email-section-title">🏆 Competitors mentioned instead of you</div>
-                    <div>
-                        <div class="competitor-row">
-                            <div class="comp-name">Stripe</div>
-                            <div class="bar-track"><div class="bar-fill bar-danger" style="width:80%"></div></div>
-                            <div class="comp-pct">80%</div>
-                        </div>
-                        <div class="competitor-row">
-                            <div class="comp-name">Paddle</div>
-                            <div class="bar-track"><div class="bar-fill bar-warning" style="width:55%"></div></div>
-                            <div class="comp-pct">55%</div>
-                        </div>
-                        <div class="competitor-row">
-                            <div class="comp-name">Mollie</div>
-                            <div class="bar-track"><div class="bar-fill bar-warning" style="width:40%"></div></div>
-                            <div class="comp-pct">40%</div>
-                        </div>
-                        <div class="competitor-row">
-                            <div class="comp-name you">You</div>
-                            <div class="bar-track"><div class="bar-fill bar-blue" style="width:20%"></div></div>
-                            <div class="comp-pct" style="color:#4B8BF5;">20%</div>
-                        </div>
-                    </div>
-
-                    <div class="email-section-title">✅ Prompts where you appeared</div>
-                    <div class="prompt-list">
-                        <div class="prompt-item">
-                            <span>✅</span>
-                            <span>"best payment API for European startups"</span>
-                        </div>
-                        <div class="prompt-item">
-                            <span>✅</span>
-                            <span>"payment API with SEPA support"</span>
-                        </div>
-                    </div>
-
-                    <div class="email-section-title">❌ Prompts where you were invisible</div>
-                    <div class="prompt-list">
-                        <div class="prompt-item">
-                            <span>❌</span>
-                            <span>"best payment API for SaaS"</span>
-                        </div>
-                        <div class="prompt-item">
-                            <span>❌</span>
-                            <span>"cheapest payment API"</span>
-                        </div>
-                        <div class="prompt-item">
-                            <span>❌</span>
-                            <span>"payment API for subscription billing"</span>
-                        </div>
-                    </div>
-
-                    <div class="insight-box">
-                        <div class="insight-label">🧠 Today's insight</div>
-                        <div class="insight-text">Your strongest area is European-specific queries — this is where your positioning resonates most. Your biggest gap is subscription billing prompts where Stripe and Paddle dominate. Consider strengthening your documentation around recurring payments to improve visibility there.</div>
-                    </div>
-
-                    <div class="email-footer-bar">
-                        RankAPI · Unsubscribe · rankapi.ai
-                    </div>
-                </div>
-            </div>
-        </div>
+        <p class="hero-credibility">Built by a backend engineer who noticed how invisible most APIs are to AI.</p>
     </section>
 
-    <section class="section" id="how">
+    <section class="section" id="problem">
         <div class="section-label">The Problem</div>
         <h2>Developers ask AI.<br>AI ignores you.</h2>
-        <p>The way developers discover APIs is changing fast. They don't Google anymore — they ask Claude, ChatGPT, and Gemini. If you're not in those answers, you're losing customers without even knowing it.</p>
+        <p>Developers no longer search on Google. They ask AI models which APIs to use. If your API isn't showing up in those answers, you're losing customers without knowing it.</p>
         <div class="stats">
             <div class="stat">
                 <div class="stat-num">80%</div>
@@ -714,44 +588,36 @@
         </div>
     </section>
 
-    <section class="section">
-        <div class="section-label">What you get</div>
-        <h2>Track. Understand.<br>Improve.</h2>
+    <section class="section" id="whats-inside">
+        <div class="section-label">What's Inside Your Report</div>
+        <h2>A complete visibility<br>audit for your API.</h2>
         <div class="features">
             <div class="feature">
                 <div class="feature-icon">📡</div>
-                <h3>Daily Visibility Reports</h3>
-                <p>Know exactly how often your API appears across Claude, ChatGPT and Gemini every single day. Delivered to your inbox every morning.</p>
+                <h3>Visibility Breakdown</h3>
+                <p>See how often your API appears across ChatGPT, Claude, and Gemini — broken down by AI model so you know exactly where you stand.</p>
             </div>
             <div class="feature">
                 <div class="feature-icon">⚔️</div>
-                <h3>Competitor Benchmarking</h3>
-                <p>See which APIs are recommended instead of yours and on which exact prompts. Know your enemy.</p>
+                <h3>Competitor Comparison</h3>
+                <p>Find out which APIs are being recommended instead of yours and on which exact prompts. Know your competition.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🔍</div>
+                <h3>Prompt Analysis</h3>
+                <p>Learn which developer queries you appear in, and — more importantly — where you're completely invisible.</p>
             </div>
             <div class="feature">
                 <div class="feature-icon">📈</div>
-                <h3>Visibility Improvement</h3>
-                <p>We don't just track — we help you show up. Our platform is built to make your API more discoverable to AI assistants over time.</p>
-            </div>
-            <div class="feature">
-                <div class="feature-icon">🧠</div>
-                <h3>AI-Powered Insights</h3>
-                <p>Daily insights telling you exactly what's working, what's not, and what to focus on next.</p>
+                <h3>Actionable Insights</h3>
+                <p>Get specific, concrete steps you can take to improve your visibility in AI responses going forward.</p>
             </div>
         </div>
     </section>
 
-    <section class="section">
-        <div class="section-label">See how it works</div>
-        <h2>The mechanics<br>behind the magic</h2>
-        <p>We query AI assistants with real developer prompts — the same ones your potential users are typing right now. Every day, we track which APIs get mentioned, which get ignored, and why. You get the full picture delivered to your inbox, plus actionable steps to improve your visibility over time.</p>
-    </section>
-
-    <p class="founder-note">Built by a backend engineer who noticed the problem firsthand.</p>
-
     <section class="section" id="how-it-works">
-        <div class="section-label">How it works</div>
-        <h2>Early access<br>in 3 steps</h2>
+        <div class="section-label">How It Works</div>
+        <h2>Get your report<br>in 3 steps</h2>
         <div class="early-steps">
             <div class="step">
                 <div class="step-num">1</div>
@@ -763,27 +629,26 @@
             <div class="step">
                 <div class="step-num">2</div>
                 <div class="step-body">
-                    <div class="step-title">Founder personally emails you</div>
-                    <div class="step-desc">If you're among the first 5, I'll send you a direct payment link and confirmation.</div>
+                    <div class="step-title">Founder personally reviews your API</div>
+                    <div class="step-desc">After payment, I'll confirm your order and start the analysis.</div>
                 </div>
             </div>
             <div class="step">
                 <div class="step-num">3</div>
                 <div class="step-body">
-                    <div class="step-title">Receive your personalized report</div>
-                    <div class="step-desc">After payment, I'll deliver your full AI Visibility Report — customized to your API and competitors.</div>
+                    <div class="step-title">Receive your full report</div>
+                    <div class="step-desc">Delivered in 48 hours with insights and specific recommendations.</div>
                 </div>
             </div>
         </div>
-        <p class="early-note">After the first 5 early adopters, the price returns to <strong>$199</strong>.</p>
+        <p class="early-note">After receiving your report, you'll have the option to join our daily visibility tracking program.</p>
     </section>
 
     <section class="cta-section">
         <div class="cta-box">
-            <h2>Think your API is visible?</h2>
-            <p>Secure your AI Visibility Report for <strong>$99</strong> — limited to the first 5 early adopters. Includes a 50% lifetime discount on all future RankAPI products.</p>
-            <button class="btn-primary modal-trigger">Join Early Access (Only 5 Spots)</button>
-            <div class="waitlist-note">After first 5: price returns to $199 · 50% lifetime discount applies to all early adopters</div>
+            <h2>Ready to see how visible your API really is?</h2>
+            <p>Get your personalized AI Visibility Report for <strong>$99</strong>. Includes a <strong>50% lifetime discount</strong> on all future RankAPI products.</p>
+            <button class="btn-primary modal-trigger">Order My Report</button>
         </div>
     </section>
 </main>
@@ -794,8 +659,7 @@
         <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
         <div class="modal-form-wrap">
             <div class="modal-title">Get your AI Visibility Report</div>
-            <div class="modal-trust">Trusted by API founders improving their AI visibility.</div>
-            <div class="modal-subtitle">$99 for the first 5 early adopters. Includes a 50% lifetime discount on all future RankAPI products.</div>
+            <div class="modal-subtitle">$99 for your personalized report. Includes a 50% lifetime discount on all future RankAPI products.</div>
             <form id="auditForm" action="https://formspree.io/f/xbdqbyzb" method="POST" autocomplete="off">
                 <div class="form-group">
                     <label class="form-label" for="name">Your name</label>
@@ -814,33 +678,25 @@
                     <input class="form-input" type="url" id="apiWebsite" name="apiWebsite" required placeholder="https://stripe.com">
                 </div>
                 <div class="form-group">
-                    <label class="form-label" for="primaryGoal">Primary goal</label>
-                    <select class="form-select" id="primaryGoal" name="primaryGoal" required>
-                        <option value="" disabled selected>Select your goal</option>
-                        <option value="increase-visibility">Increase visibility</option>
-                        <option value="benchmark-competitors">Benchmark competitors</option>
-                        <option value="improve-positioning">Improve positioning</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label class="form-label" for="referralSource">How did you hear about us?</label>
-                    <select class="form-select" id="referralSource" name="referralSource">
-                        <option value="" disabled selected>Select an option</option>
-                        <option value="google">Google</option>
-                        <option value="ai-recommendation">AI recommendation</option>
-                        <option value="twitter">Twitter / X</option>
-                        <option value="linkedin">LinkedIn</option>
-                        <option value="word-of-mouth">Word of mouth</option>
+                    <label class="form-label" for="apiCategory">API category</label>
+                    <select class="form-select" id="apiCategory" name="apiCategory" required>
+                        <option value="" disabled selected>Select your API type</option>
+                        <option value="payments">Payments / Billing</option>
+                        <option value="auth">Authentication / Identity</option>
+                        <option value="communications">Communications / Messaging</option>
+                        <option value="storage">Storage / Databases</option>
+                        <option value="ai-ml">AI / ML</option>
+                        <option value="dev-tools">Developer Tools</option>
                         <option value="other">Other</option>
                     </select>
                 </div>
-                <div class="form-group form-checkbox">
+                                <div class="form-group form-checkbox">
                     <label class="checkbox-label">
-                        <input type="checkbox" name="earlyAccess" value="yes">
-                        <span>Would you like early access to RankAPI's full dashboard when it launches?</span>
+                        <input type="checkbox" name="updates" value="yes">
+                        <span>Keep me posted on new RankAPI features and products.</span>
                     </label>
                 </div>
-                <button type="submit" class="form-submit">Secure my early adopter spot →</button>
+                <button type="submit" class="form-submit">Order My Report →</button>
                 <div class="form-error" id="formError">Something went wrong. Please try again.</div>
             </form>
         </div>
