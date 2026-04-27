@@ -281,10 +281,7 @@
 
         .score-value { font-family: 'Syne', sans-serif; font-size: 1.8rem; font-weight: 800; color: #0f172a; line-height: 1; margin-bottom: 6px; }
 
-        .score-trend { font-size: 0.72rem; font-weight: 600; display: flex; align-items: center; gap: 4px; }
-        .trend-up { color: #10b981; }
-        .trend-down { color: #ef4444; }
-        .trend-same { color: #94a3b8; }
+        .score-trend { font-size: 0.72rem; color: #94a3b8; }
 
         .email-section-title { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #94a3b8; margin-bottom: 12px; margin-top: 20px; }
 
@@ -566,6 +563,118 @@
             <a href="#" class="btn-primary modal-trigger">Order your report for $99</a>
         </div>
         <p class="hero-credibility">Built by a backend engineer who noticed how invisible most APIs are to AI.</p>
+
+        <div class="report-wrap">
+            <div class="report-label">📬 What your report looks like</div>
+            <div class="email-chrome">
+                <div class="email-chrome-bar">
+                    <div class="dot dot-r"></div>
+                    <div class="dot dot-y"></div>
+                    <div class="dot dot-g"></div>
+                    <div class="email-chrome-title">📧 Inbox — rankapi.ai</div>
+                </div>
+                <div class="email-meta">
+                    <div><strong>From:</strong> Daniel from RankAPI &lt;daniel@rankapi.ai&gt;</div>
+                    <div><strong>Subject:</strong> Your AI Visibility Report — [Your API Name]</div>
+                    <div><strong>To:</strong> you@yourcompany.com</div>
+                </div>
+                <div class="email-body">
+                    <div class="email-header">
+                        <div>
+                            <div class="email-logo"><span class="rank">Rank</span><span class="api">API</span></div>
+                            <div style="font-size:0.7rem;color:#94a3b8;margin-top:2px;">Personalized AI Visibility Report</div>
+                        </div>
+                        <div class="email-date">April 25, 2026</div>
+                    </div>
+
+                    <div class="email-title">Your AI Visibility Report</div>
+                    <div class="email-subtitle">Here's what we found for <strong>[Your API Name]</strong> across ChatGPT · Claude · Gemini</div>
+
+                    <div class="score-grid">
+                        <div class="score-card">
+                            <div class="score-card-label">
+                                <span class="ai-dot" style="background:#7c3aed;"></span>
+                                Claude
+                            </div>
+                            <div class="score-value">[X%]</div>
+                            <div class="score-trend">Visibility score</div>
+                        </div>
+                        <div class="score-card">
+                            <div class="score-card-label">
+                                <span class="ai-dot" style="background:#1daa19;"></span>
+                                ChatGPT
+                            </div>
+                            <div class="score-value">[X%]</div>
+                            <div class="score-trend">Visibility score</div>
+                        </div>
+                        <div class="score-card">
+                            <div class="score-card-label">
+                                <span class="ai-dot" style="background:#1a73e8;"></span>
+                                Gemini
+                            </div>
+                            <div class="score-value">[X%]</div>
+                            <div class="score-trend">Visibility score</div>
+                        </div>
+                        <div class="score-card">
+                            <div class="score-card-label">
+                                <span class="ai-dot" style="background:#e53e3e;"></span>
+                                Perplexity
+                            </div>
+                            <div class="score-value">[X%]</div>
+                            <div class="score-trend">Visibility score</div>
+                        </div>
+                    </div>
+
+                    <div class="email-section-title">🔍 Where you're winning</div>
+                    <div class="prompt-list">
+                        <div class="prompt-item">
+                            <span>✅</span>
+                            <span>"best [category] API for [use case]"</span>
+                        </div>
+                    </div>
+
+                    <div class="email-section-title">❌ Where you're invisible</div>
+                    <div class="prompt-list">
+                        <div class="prompt-item">
+                            <span>❌</span>
+                            <span>"best [category] API for [use case]"</span>
+                        </div>
+                        <div class="prompt-item">
+                            <span>❌</span>
+                            <span>"[category] API comparison"</span>
+                        </div>
+                    </div>
+
+                    <div class="email-section-title">🏆 Competitors mentioned instead of you</div>
+                    <div>
+                        <div class="competitor-row">
+                            <div class="comp-name">[Competitor A]</div>
+                            <div class="bar-track"><div class="bar-fill bar-danger" style="width:80%"></div></div>
+                            <div class="comp-pct">80%</div>
+                        </div>
+                        <div class="competitor-row">
+                            <div class="comp-name">[Competitor B]</div>
+                            <div class="bar-track"><div class="bar-fill bar-warning" style="width:50%"></div></div>
+                            <div class="comp-pct">50%</div>
+                        </div>
+                        <div class="competitor-row">
+                            <div class="comp-name you">You</div>
+                            <div class="bar-track"><div class="bar-fill bar-blue" style="width:15%"></div></div>
+                            <div class="comp-pct" style="color:#4B8BF5;">15%</div>
+                        </div>
+                    </div>
+
+                    <div class="insight-box">
+                        <div class="insight-label">💡 Key Insight</div>
+                        <div class="insight-text">Your API shows low visibility in [specific use case] prompts, where [Competitor A] dominates. Adding concrete code examples for this use case in your documentation could meaningfully improve your visibility in AI responses.</div>
+                    </div>
+
+                    <div class="email-footer-bar">
+                        RankAPI · 50% lifetime discount active · rankapi.ai
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <section class="section" id="problem">
