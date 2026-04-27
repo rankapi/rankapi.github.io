@@ -190,7 +190,7 @@
         .report-wrap {
             margin-top: 80px;
             width: 100%;
-            max-width: 620px;
+            max-width: 660px;
             opacity: 0;
             animation: fadeUp 0.8s ease forwards 1s;
         }
@@ -211,6 +211,7 @@
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 40px 80px rgba(0,0,0,0.6), 0 0 0 1px rgba(29,78,216,0.08);
+            padding: 20px;
         }
 
         .email-chrome-bar {
@@ -258,28 +259,43 @@
             border-bottom: 2px solid #f1f5f9;
         }
 
-        .email-logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.2rem; color: #0f172a; }
+        .email-logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.2rem; color: #0f172a; display: inline-block; }
         .email-logo .rank { color: #4B8BF5; }
         .email-logo .api { color: #D97706; }
 
-        .email-date { font-size: 0.75rem; color: #94a3b8; text-align: right; }
+        .email-logo-sub { font-size: 0.7rem; color: #94a3b8; margin-top: 4px; display: block; }
+
+        .premium-badge {
+            display: inline-block;
+            margin-left: 10px;
+            background: linear-gradient(135deg, #f6d365, #fda085);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.65rem;
+            font-weight: 700;
+            vertical-align: middle;
+        }
+
+        .email-date { font-size: 0.75rem; color: #64748b; text-align: right; }
+        .score-big { font-family: 'Syne', sans-serif; font-size: 1rem; font-weight: 800; color: #667eea; margin-top: 2px; }
 
         .email-title { font-family: 'Syne', sans-serif; font-size: 1.1rem; font-weight: 700; color: #0f172a; margin-bottom: 4px; }
         .email-subtitle { font-size: 0.78rem; color: #94a3b8; margin-bottom: 28px; }
 
-        .score-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 24px; }
+        .score-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 24px; }
 
-        .score-card { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 16px; }
+        .score-card { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 14px 12px; text-align: center; }
 
         .score-card-label {
-            font-size: 0.7rem; font-weight: 600; color: #94a3b8;
+            font-size: 0.65rem; font-weight: 600; color: #94a3b8;
             letter-spacing: 0.08em; text-transform: uppercase;
-            margin-bottom: 8px; display: flex; align-items: center; gap: 6px;
+            margin-bottom: 8px; display: flex; align-items: center; justify-content: center; gap: 4px;
         }
 
-        .ai-dot { width: 6px; height: 6px; border-radius: 50%; display: inline-block; }
+        .ai-dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
 
-        .score-value { font-family: 'Syne', sans-serif; font-size: 1.8rem; font-weight: 800; color: #0f172a; line-height: 1; margin-bottom: 6px; }
+        .score-value { font-family: 'Syne', sans-serif; font-size: 1.6rem; font-weight: 800; color: #0f172a; line-height: 1; }
 
         .score-trend { font-size: 0.72rem; color: #94a3b8; }
 
@@ -296,6 +312,22 @@
         .bar-blue { background: #4B8BF5; }
 
         .comp-pct { font-size: 0.72rem; font-weight: 600; color: #64748b; width: 34px; text-align: right; flex-shrink: 0; }
+
+        .competitors-note { font-size: 0.72rem; color: #64748b; margin-top: 8px; }
+        .competitors-note strong { color: #334155; }
+
+        .audit-list { margin-bottom: 8px; }
+        .audit-item { display: flex; align-items: flex-start; gap: 10px; padding: 8px 0; border-bottom: 1px solid #f1f5f9; font-size: 0.78rem; }
+        .audit-item:last-child { border-bottom: none; }
+        .audit-icon { font-size: 1rem; flex-shrink: 0; }
+        .audit-title { font-weight: 600; color: #334155; min-width: 200px; flex-shrink: 0; }
+        .audit-item.audit-fail .audit-title { color: #ef4444; }
+        .audit-desc { color: #64748b; font-size: 0.72rem; }
+
+        .action-list { margin-bottom: 8px; }
+        .action-item { display: flex; align-items: flex-start; gap: 8px; padding: 6px 0; border-bottom: 1px solid #f1f5f9; font-size: 0.78rem; color: #475569; }
+        .action-item:last-child { border-bottom: none; }
+        .action-item::before { content: '→'; color: #4B8BF5; font-weight: 700; flex-shrink: 0; }
 
         .prompt-list { margin-bottom: 8px; }
         .prompt-item { display: flex; align-items: flex-start; gap: 8px; padding: 6px 0; border-bottom: 1px solid #f1f5f9; font-size: 0.75rem; color: #475569; }
@@ -574,103 +606,146 @@
                     <div class="email-chrome-title">📧 Inbox — rankapi.ai</div>
                 </div>
                 <div class="email-meta">
-                    <div><strong>From:</strong> Daniel from RankAPI &lt;daniel@rankapi.ai&gt;</div>
-                    <div><strong>Subject:</strong> Your AI Visibility Report — [Your API Name]</div>
+                    <div><strong>From:</strong> RankAPI Reports &lt;reports@rankapi.ai&gt;</div>
+                    <div><strong>Subject:</strong> 🏆 Your RankAPI Premium Audit Results</div>
                     <div><strong>To:</strong> you@yourcompany.com</div>
                 </div>
                 <div class="email-body">
+                    <!-- Logo + Date row -->
                     <div class="email-header">
                         <div>
-                            <div class="email-logo"><span class="rank">Rank</span><span class="api">API</span></div>
-                            <div style="font-size:0.7rem;color:#94a3b8;margin-top:2px;">Personalized AI Visibility Report</div>
+                            <span class="email-logo"><span class="rank">Rank</span><span class="api">API</span></span>
+                            <span class="premium-badge">PREMIUM AUDIT</span>
+                            <div class="email-logo-sub">Visibility Report</div>
                         </div>
-                        <div class="email-date">April 25, 2026</div>
+                        <div class="email-date">
+                            April 26, 2026
+                            <div class="score-big">35%</div>
+                        </div>
                     </div>
 
-                    <div class="email-title">Your AI Visibility Report</div>
-                    <div class="email-subtitle">Here's what we found for <strong>[Your API Name]</strong> across ChatGPT · Claude · Gemini</div>
+                    <!-- Title -->
+                    <div class="email-title">Platio Payments API</div>
+                    <div class="email-subtitle">Visibility across Claude · ChatGPT · Gemini · Perplexity</div>
 
+                    <!-- Score cards -->
                     <div class="score-grid">
                         <div class="score-card">
                             <div class="score-card-label">
                                 <span class="ai-dot" style="background:#7c3aed;"></span>
                                 Claude
                             </div>
-                            <div class="score-value">[X%]</div>
-                            <div class="score-trend">Visibility score</div>
+                            <div class="score-value">40%</div>
                         </div>
                         <div class="score-card">
                             <div class="score-card-label">
                                 <span class="ai-dot" style="background:#1daa19;"></span>
                                 ChatGPT
                             </div>
-                            <div class="score-value">[X%]</div>
-                            <div class="score-trend">Visibility score</div>
+                            <div class="score-value">35%</div>
                         </div>
                         <div class="score-card">
                             <div class="score-card-label">
                                 <span class="ai-dot" style="background:#1a73e8;"></span>
                                 Gemini
                             </div>
-                            <div class="score-value">[X%]</div>
-                            <div class="score-trend">Visibility score</div>
+                            <div class="score-value">30%</div>
                         </div>
                         <div class="score-card">
                             <div class="score-card-label">
                                 <span class="ai-dot" style="background:#e53e3e;"></span>
                                 Perplexity
                             </div>
-                            <div class="score-value">[X%]</div>
-                            <div class="score-trend">Visibility score</div>
+                            <div class="score-value">25%</div>
                         </div>
                     </div>
 
-                    <div class="email-section-title">🔍 Where you're winning</div>
-                    <div class="prompt-list">
-                        <div class="prompt-item">
-                            <span>✅</span>
-                            <span>"best [category] API for [use case]"</span>
-                        </div>
-                    </div>
-
-                    <div class="email-section-title">❌ Where you're invisible</div>
-                    <div class="prompt-list">
-                        <div class="prompt-item">
-                            <span>❌</span>
-                            <span>"best [category] API for [use case]"</span>
-                        </div>
-                        <div class="prompt-item">
-                            <span>❌</span>
-                            <span>"[category] API comparison"</span>
-                        </div>
-                    </div>
-
+                    <!-- Competitors section -->
                     <div class="email-section-title">🏆 Competitors mentioned instead of you</div>
                     <div>
                         <div class="competitor-row">
-                            <div class="comp-name">[Competitor A]</div>
+                            <div class="comp-name">Stripe</div>
                             <div class="bar-track"><div class="bar-fill bar-danger" style="width:80%"></div></div>
                             <div class="comp-pct">80%</div>
                         </div>
                         <div class="competitor-row">
-                            <div class="comp-name">[Competitor B]</div>
-                            <div class="bar-track"><div class="bar-fill bar-warning" style="width:50%"></div></div>
-                            <div class="comp-pct">50%</div>
+                            <div class="comp-name">Paddle</div>
+                            <div class="bar-track"><div class="bar-fill bar-warning" style="width:55%"></div></div>
+                            <div class="comp-pct">55%</div>
+                        </div>
+                        <div class="competitor-row">
+                            <div class="comp-name">Mollie</div>
+                            <div class="bar-track"><div class="bar-fill bar-warning" style="width:40%"></div></div>
+                            <div class="comp-pct">40%</div>
                         </div>
                         <div class="competitor-row">
                             <div class="comp-name you">You</div>
-                            <div class="bar-track"><div class="bar-fill bar-blue" style="width:15%"></div></div>
-                            <div class="comp-pct" style="color:#4B8BF5;">15%</div>
+                            <div class="bar-track"><div class="bar-fill bar-blue" style="width:20%"></div></div>
+                            <div class="comp-pct" style="color:#4B8BF5;">20%</div>
+                        </div>
+                    </div>
+                    <div class="competitors-note">Your competitors: Stripe, Paddle, Mollie, Braintree</div>
+
+                    <!-- Documentation Audit -->
+                    <div class="email-section-title">✅ 7-Step Documentation Audit</div>
+                    <div class="audit-list">
+                        <div class="audit-item audit-pass">
+                            <span class="audit-icon">✅</span>
+                            <span class="audit-title">robots.txt allows crawling</span>
+                            <span class="audit-desc">Docs are accessible to AI crawlers</span>
+                        </div>
+                        <div class="audit-item audit-pass">
+                            <span class="audit-icon">✅</span>
+                            <span class="audit-title">OpenAPI / Swagger spec found</span>
+                            <span class="audit-desc">openapi.json detected at docs endpoint</span>
+                        </div>
+                        <div class="audit-item audit-pass">
+                            <span class="audit-icon">✅</span>
+                            <span class="audit-title">Code examples in 5+ languages</span>
+                            <span class="audit-desc">Python, Node.js, Go, Ruby, Java all present</span>
+                        </div>
+                        <div class="audit-item audit-pass">
+                            <span class="audit-icon">✅</span>
+                            <span class="audit-title">SDK / client libraries</span>
+                            <span class="audit-desc">Official SDKs for Python, Node.js, Go</span>
+                        </div>
+                        <div class="audit-item audit-fail">
+                            <span class="audit-icon">❌</span>
+                            <span class="audit-title">GitHub presence</span>
+                            <span class="audit-desc">No public SDK repository found</span>
+                        </div>
+                        <div class="audit-item audit-fail">
+                            <span class="audit-icon">❌</span>
+                            <span class="audit-title">Pricing page indexed</span>
+                            <span class="audit-desc">Pricing page blocked by meta robots noindex</span>
+                        </div>
+                        <div class="audit-item audit-pass">
+                            <span class="audit-icon">✅</span>
+                            <span class="audit-title">Changelog / release notes</span>
+                            <span class="audit-desc">Changelog found and regularly updated</span>
                         </div>
                     </div>
 
+                    <!-- Personalized Action Plan -->
+                    <div class="email-section-title">📋 Your Personalized Action Plan</div>
+                    <div class="action-list">
+                        <div class="action-item">→ Publish an official GitHub SDK repository — even a basic one increases credibility with AI scraping pipelines.</div>
+                        <div class="action-item">→ Remove noindex from your pricing page — AI assistants need this page to give accurate cost estimates to users.</div>
+                        <div class="action-item">→ Add a dedicated "Integrations" page listing all supported platforms and their setup steps.</div>
+                        <div class="action-item">→ Create a developer-focused landing page at /developers with code snippets for top use cases.</div>
+                        <div class="action-item">→ Submit your API to AI-focused directories and developer hub listings.</div>
+                        <div class="action-item">→ Ensure your OpenAPI spec is referenced in the &lt;head&gt; of your docs.</div>
+                        <div class="action-item">→ Add case studies or "Used by" logos to your homepage — social proof is picked up by AI ranking signals.</div>
+                    </div>
+
+                    <!-- AI-generated Insight -->
                     <div class="insight-box">
-                        <div class="insight-label">💡 Key Insight</div>
-                        <div class="insight-text">Your API shows low visibility in [specific use case] prompts, where [Competitor A] dominates. Adding concrete code examples for this use case in your documentation could meaningfully improve your visibility in AI responses.</div>
+                        <div class="insight-label">💡 AI-generated Insight</div>
+                        <div class="insight-text">Platio performs well on pricing-sensitive queries like "cheapest payment API" and technical queries like "payment API with SEPA support". However, you're nearly invisible on subscription-billing queries where Stripe dominates. The biggest gap is your missing public SDK — AI models consistently cite GitHub presence as a trust signal. Publishing a single official SDK (Python is enough to start) would likely move your visibility score from 35% to above 50% within 30 days.</div>
                     </div>
 
                     <div class="email-footer-bar">
-                        RankAPI · 50% lifetime discount active · rankapi.ai
+                        RankAPI · <a href="#" style="color: #94a3b8;">Unsubscribe</a> · rankapi.ai
                     </div>
                 </div>
             </div>
