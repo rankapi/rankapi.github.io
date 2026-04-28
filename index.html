@@ -332,6 +332,9 @@
         .prompt-list { margin-bottom: 8px; }
         .prompt-item { display: flex; align-items: flex-start; gap: 8px; padding: 6px 0; border-bottom: 1px solid #f1f5f9; font-size: 0.75rem; color: #475569; }
         .prompt-item:last-child { border-bottom: none; }
+        .prompt-check { color: #10b981; font-weight: 700; flex-shrink: 0; }
+        .prompt-cross { color: #ef4444; font-weight: 700; flex-shrink: 0; }
+        .prompt-group-title { font-size: 0.7rem; font-weight: 600; color: #64748b; margin: 12px 0 4px; text-transform: uppercase; letter-spacing: 0.05em; }
 
         .insight-box { background: linear-gradient(135deg, #eff6ff, #dbeafe); border: 1px solid #bfdbfe; border-radius: 8px; padding: 16px; margin-top: 20px; }
         .insight-label { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #1d4ed8; margin-bottom: 8px; }
@@ -399,6 +402,30 @@
         .step-desc { font-size: 0.85rem; color: var(--muted); line-height: 1.6; }
         .early-note { margin-top: 40px; font-size: 0.85rem; color: var(--muted); }
         .early-note strong { color: #4B8BF5; }
+
+        /* REPORT COMPONENTS */
+        .report-components { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; margin-top: 48px; }
+        .report-component { background: var(--bg2); padding: 28px 24px; display: flex; align-items: flex-start; gap: 16px; }
+        .report-component-icon { font-size: 1.4rem; flex-shrink: 0; }
+        .report-component-title { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 0.95rem; margin-bottom: 4px; }
+        .report-component-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.6; }
+        .bonus-stripe {
+            margin-top: 24px;
+            background: linear-gradient(135deg, rgba(29,78,216,0.1), rgba(29,78,216,0.05));
+            border: 1px solid rgba(29,78,216,0.3);
+            border-radius: 8px;
+            padding: 16px 24px;
+            font-size: 0.85rem;
+            color: var(--text);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .bonus-star { color: #f6d365; font-size: 1rem; }
+        .bonus-stripe strong { color: #4B8BF5; }
+
+        .guarantee-line { margin-top: 16px; font-size: 0.78rem; color: var(--muted); font-style: italic; }
+        .scarcity-line { margin-top: 8px; font-size: 0.78rem; color: #4B8BF5; font-weight: 600; }
 
         /* MODAL */
         .modal-backdrop {
@@ -686,6 +713,43 @@
                     </div>
                     <div class="competitors-note">Your competitors: Stripe, Paddle, Mollie, Braintree</div>
 
+                    <!-- Prompts section -->
+                    <div class="email-section-title">🔍 Prompts analyzed</div>
+                    <div class="prompt-group-title">Where your API appeared</div>
+                    <div class="prompt-list">
+                        <div class="prompt-item">
+                            <span class="prompt-check">✅</span>
+                            <span>"best payment API for European startups"</span>
+                        </div>
+                        <div class="prompt-item">
+                            <span class="prompt-check">✅</span>
+                            <span>"payment API with SEPA support"</span>
+                        </div>
+                        <div class="prompt-item">
+                            <span class="prompt-check">✅</span>
+                            <span>"cheapest payment API for SaaS"</span>
+                        </div>
+                    </div>
+                    <div class="prompt-group-title">Where your API was invisible</div>
+                    <div class="prompt-list">
+                        <div class="prompt-item">
+                            <span class="prompt-cross">❌</span>
+                            <span>"payment API for subscription billing"</span>
+                        </div>
+                        <div class="prompt-item">
+                            <span class="prompt-cross">❌</span>
+                            <span>"payment API comparison"</span>
+                        </div>
+                        <div class="prompt-item">
+                            <span class="prompt-cross">❌</span>
+                            <span>"payment API with webhooks support"</span>
+                        </div>
+                        <div class="prompt-item">
+                            <span class="prompt-cross">❌</span>
+                            <span>"payment API for marketplaces"</span>
+                        </div>
+                    </div>
+
                     <!-- Documentation Audit -->
                     <div class="email-section-title">✅ 7-Step Documentation Audit</div>
                     <div class="audit-list">
@@ -779,7 +843,7 @@
             <div class="feature">
                 <div class="feature-icon">📡</div>
                 <h3>Visibility Breakdown</h3>
-                <p>See how often your API appears across ChatGPT, Claude, and Gemini — broken down by AI model so you know exactly where you stand.</p>
+                <p>See exactly how your API scores across ChatGPT, Claude, Gemini, and Perplexity — side by side. Know which platforms you're winning and which you're missing.</p>
             </div>
             <div class="feature">
                 <div class="feature-icon">⚔️</div>
@@ -828,11 +892,66 @@
         <p class="early-note">After receiving your report, you'll have the option to join our daily visibility tracking program.</p>
     </section>
 
+    <section class="section" id="whats-you-get">
+        <div class="section-label">What you're getting</div>
+        <h2>Your report includes<br>everything below.</h2>
+        <div class="report-components">
+            <div class="report-component">
+                <div class="report-component-icon">📊</div>
+                <div class="report-component-content">
+                    <div class="report-component-title">Personalized AI Visibility Report</div>
+                    <div class="report-component-desc">Your API scored across ChatGPT, Claude, Gemini, and Perplexity — with specific percentages per platform.</div>
+                </div>
+            </div>
+            <div class="report-component">
+                <div class="report-component-icon">🏆</div>
+                <div class="report-component-content">
+                    <div class="report-component-title">Competitor Benchmarking</div>
+                    <div class="report-component-desc">See exactly which APIs are being recommended instead of yours and on which prompts.</div>
+                </div>
+            </div>
+            <div class="report-component">
+                <div class="report-component-icon">🔍</div>
+                <div class="report-component-content">
+                    <div class="report-component-title">Prompts Analyzed</div>
+                    <div class="report-component-desc">Full list of developer queries where you appeared — and where you were invisible. Every prompt that matters for your category.</div>
+                </div>
+            </div>
+            <div class="report-component">
+                <div class="report-component-icon">✅</div>
+                <div class="report-component-content">
+                    <div class="report-component-title">7-Step Documentation Audit</div>
+                    <div class="report-component-desc">AI-friendly docs checklist: OpenAPI spec, code examples, SDK presence, pricing page indexing — all evaluated.</div>
+                </div>
+            </div>
+            <div class="report-component">
+                <div class="report-component-icon">📋</div>
+                <div class="report-component-content">
+                    <div class="report-component-title">Personalized Action Plan</div>
+                    <div class="report-component-desc">Specific steps to improve your visibility — customized to your API and competitors, delivered with your report.</div>
+                </div>
+            </div>
+            <div class="report-component">
+                <div class="report-component-icon">💡</div>
+                <div class="report-component-content">
+                    <div class="report-component-title">AI-Generated Insight</div>
+                    <div class="report-component-desc">One paragraph tailored to your situation — the single biggest opportunity to move your score up.</div>
+                </div>
+            </div>
+        </div>
+        <div class="bonus-stripe">
+            <span class="bonus-star">★</span>
+            <span>Plus: <strong>50% lifetime discount</strong> on all future RankAPI products — locked in when you order today.</span>
+        </div>
+    </section>
+
     <section class="cta-section">
         <div class="cta-box">
             <h2>Ready to see how visible your API really is?</h2>
             <p>Get your personalized AI Visibility Report for <strong>$99</strong>. Includes a <strong>50% lifetime discount</strong> on all future RankAPI products.</p>
             <button class="btn-primary modal-trigger">Order My Report</button>
+            <div class="guarantee-line">Not satisfied? Reply to the report email and I'll make it right. No questions asked.</div>
+            <div class="scarcity-line">Currently accepting 5 clients per month to keep delivery at 48 hours.</div>
         </div>
     </section>
 </main>
