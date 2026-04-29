@@ -426,10 +426,10 @@
 
         .badge-tiers {
             margin-top: 24px;
-            background: linear-gradient(135deg, rgba(29,78,216,0.08), rgba(29,78,216,0.03));
-            border: 1px solid rgba(29,78,216,0.25);
+            border: 1px solid var(--border);
             border-radius: 8px;
             padding: 20px 24px;
+            background: var(--bg2);
         }
         .badge-tiers-title {
             font-size: 0.7rem;
@@ -446,32 +446,36 @@
             gap: 10px;
         }
         .badge-card {
-            background: rgba(255,255,255,0.5);
-            border: 1px solid rgba(29,78,216,0.15);
+            background: var(--surface);
+            border: 1px solid var(--border);
             border-radius: 6px;
-            padding: 12px 8px;
+            padding: 14px 10px;
             text-align: center;
         }
+        .badge-card.is-founder { border-color: rgba(217,119,6,0.4); }
         .badge-name {
             font-size: 0.75rem;
             font-weight: 700;
-            color: var(--text);
             margin-bottom: 2px;
         }
+        .badge-card.is-founder .badge-name { color: #D97706; }
+        .badge-card.is-veteran .badge-name { color: #94a3b8; }
+        .badge-card.is-next .badge-name { color: var(--muted); }
         .badge-multiplier {
             font-size: 0.65rem;
             color: var(--muted);
-            margin-bottom: 4px;
+            margin-bottom: 6px;
         }
         .badge-price {
-            font-size: 0.8rem;
-            font-weight: 700;
+            font-size: 1rem;
+            font-weight: 800;
             color: #4B8BF5;
+            font-family: 'Syne', sans-serif;
         }
         .badge-desc {
             font-size: 0.6rem;
             color: var(--muted);
-            margin-top: 3px;
+            margin-top: 4px;
         }
         .badge-founders .badge-name { color: #d97706; }
         .badge-veterans .badge-name { color: #64748b; }
@@ -992,24 +996,24 @@
         </div>
         <div class="bonus-stripe">
             <span class="bonus-star">★</span>
-            <span><strong>Founding clients get the Founder badge</strong> — permanent half-price on all future RankAPI products, for life.</span>
+            <span><strong>Founding clients get the Founder badge</strong> — permanent lowest price on all future RankAPI products, for life.</span>
         </div>
         <div class="badge-tiers">
             <div class="badge-tiers-title">Badge Tier System</div>
             <div class="badge-grid">
-                <div class="badge-card badge-founders">
+                <div class="badge-card badge-founders is-founder">
                     <div class="badge-name">Founder</div>
                     <div class="badge-multiplier">1x price</div>
                     <div class="badge-price">$99</div>
                     <div class="badge-desc">First 5 clients only</div>
                 </div>
-                <div class="badge-card badge-veterans">
+                <div class="badge-card badge-veterans is-veteran">
                     <div class="badge-name">Veteran</div>
                     <div class="badge-multiplier">1.5x price</div>
                     <div class="badge-price">$149</div>
                     <div class="badge-desc">Next 50 clients</div>
                 </div>
-                <div class="badge-card">
+                <div class="badge-card is-next">
                     <div class="badge-name">Next</div>
                     <div class="badge-multiplier">2.25x price</div>
                     <div class="badge-price">$224</div>
@@ -1022,7 +1026,7 @@
     <section class="cta-section">
         <div class="cta-box">
             <h2>Ready to see how visible your API really is?</h2>
-            <p>Get your personalized AI Visibility Report for <strong>$99</strong> — our founding price for the first 5 clients. You'll also receive the <strong>Founder badge</strong> — permanent half-price on all future RankAPI products, for life.</p>
+            <p>Get your personalized AI Visibility Report for <strong>$99</strong> — our founding price for the first 5 clients. You'll also receive the <strong>Founder badge</strong> — permanent lowest price on all future RankAPI products, for life.</p>
             <button class="btn-primary modal-trigger">Get My AI Visibility Report</button>
             <div class="guarantee-line">Not satisfied? Reply to the report email and I'll make it right. No questions asked.</div>
         </div>
@@ -1035,7 +1039,7 @@
         <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
         <div class="modal-form-wrap">
             <div class="modal-title">Get your AI Visibility Report</div>
-            <div class="modal-subtitle">$99 founding price for the first 5 clients — then $149 for veterans. Includes the <strong>Founder badge</strong> — permanent half-price on all future RankAPI products, for life.</div>
+            <div class="modal-subtitle">$99 founding price for the first 5 clients — then $149 for veterans. Includes the <strong>Founder badge</strong> — permanent lowest price on all future RankAPI products, for life.</div>
             <form id="auditForm" action="https://formspree.io/f/xbdqbyzb" method="POST" autocomplete="off">
                 <div class="form-group">
                     <label class="form-label" for="name">Your name</label>
