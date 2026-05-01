@@ -330,17 +330,12 @@
         .action-item:last-child { border-bottom: none; }
         .action-item::before { content: '→'; color: #4B8BF5; font-weight: 700; flex-shrink: 0; }
 
-        .prompt-list { margin-bottom: 8px; }
-        .prompt-item { padding: 10px 0; border-bottom: 1px solid #f1f5f9; }
-        .prompt-item:last-child { border-bottom: none; }
-        .prompt-text { font-size: 0.78rem; color: #334155; margin-bottom: 6px; }
-        .prompt-platforms { display: flex; flex-wrap: wrap; gap: 6px; }
-        .platform-badge { display: inline-flex; align-items: center; gap: 3px; font-size: 0.65rem; font-weight: 600; padding: 3px 6px; border-radius: 4px; }
-        .platform-appeared { background: #dcfce7; color: #166534; }
-        .platform-invisible { background: #fee2e2; color: #991b1b; }
-        .prompt-check { color: #10b981; font-weight: 700; flex-shrink: 0; }
-        .prompt-cross { color: #ef4444; font-weight: 700; flex-shrink: 0; }
-        .prompt-group-title { font-size: 0.7rem; font-weight: 600; color: #64748b; margin: 12px 0 4px; text-transform: uppercase; letter-spacing: 0.05em; }
+        .prompt-table { width: 100%; border-collapse: collapse; margin-bottom: 24px; }
+        .prompt-table th { padding: 10px 12px; text-align: center; font-size: 0.7rem; font-weight: 600; color: #94a3b8; border-bottom: 2px solid #e2e8f0; background: #f8fafc; }
+        .prompt-table th:first-child { text-align: left; }
+        .prompt-table td { padding: 12px; text-align: center; font-size: 1rem; border-bottom: 1px solid #f1f5f9; color: #334155; }
+        .prompt-table td:first-child { text-align: left; font-size: 0.78rem; }
+        .prompt-table tr:last-child td { border-bottom: none; }
 
         .insight-box { background: linear-gradient(135deg, #eff6ff, #dbeafe); border: 1px solid #bfdbfe; border-radius: 8px; padding: 16px; margin-top: 20px; }
         .insight-label { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #1d4ed8; margin-bottom: 8px; }
@@ -823,44 +818,47 @@
 
                     <!-- Prompts section -->
                     <div class="email-section-title">🔍 50 Prompts analyzed</div>
-                    <div class="prompt-list">
-                        <div class="prompt-item">
-                            <div class="prompt-text">"best payment API for European startups"</div>
-                            <div class="prompt-platforms">
-                                <span class="platform-badge platform-appeared">✅ Claude</span>
-                                <span class="platform-badge platform-appeared">✅ ChatGPT</span>
-                                <span class="platform-badge platform-invisible">❌ Gemini</span>
-                                <span class="platform-badge platform-invisible">❌ Perplexity</span>
-                            </div>
-                        </div>
-                        <div class="prompt-item">
-                            <div class="prompt-text">"payment API with SEPA support"</div>
-                            <div class="prompt-platforms">
-                                <span class="platform-badge platform-appeared">✅ Claude</span>
-                                <span class="platform-badge platform-invisible">❌ ChatGPT</span>
-                                <span class="platform-badge platform-appeared">✅ Gemini</span>
-                                <span class="platform-badge platform-invisible">❌ Perplexity</span>
-                            </div>
-                        </div>
-                        <div class="prompt-item">
-                            <div class="prompt-text">"cheapest payment API for SaaS"</div>
-                            <div class="prompt-platforms">
-                                <span class="platform-badge platform-invisible">❌ Claude</span>
-                                <span class="platform-badge platform-appeared">✅ ChatGPT</span>
-                                <span class="platform-badge platform-invisible">❌ Gemini</span>
-                                <span class="platform-badge platform-appeared">✅ Perplexity</span>
-                            </div>
-                        </div>
-                        <div class="prompt-item">
-                            <div class="prompt-text">"payment API for subscription billing"</div>
-                            <div class="prompt-platforms">
-                                <span class="platform-badge platform-invisible">❌ Claude</span>
-                                <span class="platform-badge platform-invisible">❌ ChatGPT</span>
-                                <span class="platform-badge platform-invisible">❌ Gemini</span>
-                                <span class="platform-badge platform-invisible">❌ Perplexity</span>
-                            </div>
-                        </div>
-                    </div>
+                    <table class="prompt-table">
+                        <thead>
+                            <tr>
+                                <th>Prompt</th>
+                                <th>Claude</th>
+                                <th>ChatGPT</th>
+                                <th>Gemini</th>
+                                <th>Perplexity</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>"best payment API for European startups"</td>
+                                <td>✅</td>
+                                <td>✅</td>
+                                <td>❌</td>
+                                <td>❌</td>
+                            </tr>
+                            <tr>
+                                <td>"payment API with SEPA support"</td>
+                                <td>✅</td>
+                                <td>❌</td>
+                                <td>✅</td>
+                                <td>❌</td>
+                            </tr>
+                            <tr>
+                                <td>"cheapest payment API for SaaS"</td>
+                                <td>❌</td>
+                                <td>✅</td>
+                                <td>❌</td>
+                                <td>✅</td>
+                            </tr>
+                            <tr>
+                                <td>"payment API for subscription billing"</td>
+                                <td>❌</td>
+                                <td>❌</td>
+                                <td>❌</td>
+                                <td>❌</td>
+                            </tr>
+                        </tbody>
+                    </table>
 
                     <!-- Documentation & SEO Audit -->
                     <div class="email-section-title">✅ 13-Step Documentation & SEO Audit</div>
