@@ -336,6 +336,8 @@
         .prompt-table td { padding: 12px; text-align: center; font-size: 1rem; border-bottom: 1px solid #f1f5f9; color: #334155; }
         .prompt-table td:first-child { text-align: left; font-size: 0.78rem; }
         .prompt-table tr:last-child td { border-bottom: none; }
+        .prompt-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+        .prompt-table-wrap table { min-width: 500px; }
 
         .insight-box { background: linear-gradient(135deg, #eff6ff, #dbeafe); border: 1px solid #bfdbfe; border-radius: 8px; padding: 16px; margin-top: 20px; }
         .insight-label { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #1d4ed8; margin-bottom: 8px; }
@@ -818,6 +820,7 @@
 
                     <!-- Prompts section -->
                     <div class="email-section-title">🔍 50 Prompts analyzed</div>
+                    <div class="prompt-table-wrap">
                     <table class="prompt-table">
                         <thead>
                             <tr>
@@ -859,6 +862,7 @@
                             </tr>
                         </tbody>
                     </table>
+                    </div>
 
                     <!-- Documentation & SEO Audit -->
                     <div class="email-section-title">✅ 13-Step Documentation & SEO Audit</div>
