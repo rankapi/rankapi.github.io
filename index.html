@@ -331,8 +331,13 @@
         .action-item::before { content: '→'; color: #4B8BF5; font-weight: 700; flex-shrink: 0; }
 
         .prompt-list { margin-bottom: 8px; }
-        .prompt-item { display: flex; align-items: flex-start; gap: 8px; padding: 6px 0; border-bottom: 1px solid #f1f5f9; font-size: 0.75rem; color: #475569; }
+        .prompt-item { padding: 10px 0; border-bottom: 1px solid #f1f5f9; }
         .prompt-item:last-child { border-bottom: none; }
+        .prompt-text { font-size: 0.78rem; color: #334155; margin-bottom: 6px; }
+        .prompt-platforms { display: flex; flex-wrap: wrap; gap: 6px; }
+        .platform-badge { display: inline-flex; align-items: center; gap: 3px; font-size: 0.65rem; font-weight: 600; padding: 3px 6px; border-radius: 4px; }
+        .platform-appeared { background: #dcfce7; color: #166534; }
+        .platform-invisible { background: #fee2e2; color: #991b1b; }
         .prompt-check { color: #10b981; font-weight: 700; flex-shrink: 0; }
         .prompt-cross { color: #ef4444; font-weight: 700; flex-shrink: 0; }
         .prompt-group-title { font-size: 0.7rem; font-weight: 600; color: #64748b; margin: 12px 0 4px; text-transform: uppercase; letter-spacing: 0.05em; }
@@ -818,38 +823,42 @@
 
                     <!-- Prompts section -->
                     <div class="email-section-title">🔍 50 Prompts analyzed</div>
-                    <div class="prompt-group-title">Where your API appeared</div>
                     <div class="prompt-list">
                         <div class="prompt-item">
-                            <span class="prompt-check">✅</span>
-                            <span>"best payment API for European startups"</span>
+                            <div class="prompt-text">"best payment API for European startups"</div>
+                            <div class="prompt-platforms">
+                                <span class="platform-badge platform-appeared">✅ Claude</span>
+                                <span class="platform-badge platform-appeared">✅ ChatGPT</span>
+                                <span class="platform-badge platform-invisible">❌ Gemini</span>
+                                <span class="platform-badge platform-invisible">❌ Perplexity</span>
+                            </div>
                         </div>
                         <div class="prompt-item">
-                            <span class="prompt-check">✅</span>
-                            <span>"payment API with SEPA support"</span>
+                            <div class="prompt-text">"payment API with SEPA support"</div>
+                            <div class="prompt-platforms">
+                                <span class="platform-badge platform-appeared">✅ Claude</span>
+                                <span class="platform-badge platform-invisible">❌ ChatGPT</span>
+                                <span class="platform-badge platform-appeared">✅ Gemini</span>
+                                <span class="platform-badge platform-invisible">❌ Perplexity</span>
+                            </div>
                         </div>
                         <div class="prompt-item">
-                            <span class="prompt-check">✅</span>
-                            <span>"cheapest payment API for SaaS"</span>
-                        </div>
-                    </div>
-                    <div class="prompt-group-title">Where your API was invisible</div>
-                    <div class="prompt-list">
-                        <div class="prompt-item">
-                            <span class="prompt-cross">❌</span>
-                            <span>"payment API for subscription billing"</span>
+                            <div class="prompt-text">"cheapest payment API for SaaS"</div>
+                            <div class="prompt-platforms">
+                                <span class="platform-badge platform-invisible">❌ Claude</span>
+                                <span class="platform-badge platform-appeared">✅ ChatGPT</span>
+                                <span class="platform-badge platform-invisible">❌ Gemini</span>
+                                <span class="platform-badge platform-appeared">✅ Perplexity</span>
+                            </div>
                         </div>
                         <div class="prompt-item">
-                            <span class="prompt-cross">❌</span>
-                            <span>"payment API comparison"</span>
-                        </div>
-                        <div class="prompt-item">
-                            <span class="prompt-cross">❌</span>
-                            <span>"payment API with webhooks support"</span>
-                        </div>
-                        <div class="prompt-item">
-                            <span class="prompt-cross">❌</span>
-                            <span>"payment API for marketplaces"</span>
+                            <div class="prompt-text">"payment API for subscription billing"</div>
+                            <div class="prompt-platforms">
+                                <span class="platform-badge platform-invisible">❌ Claude</span>
+                                <span class="platform-badge platform-invisible">❌ ChatGPT</span>
+                                <span class="platform-badge platform-invisible">❌ Gemini</span>
+                                <span class="platform-badge platform-invisible">❌ Perplexity</span>
+                            </div>
                         </div>
                     </div>
 
