@@ -317,12 +317,13 @@
         .competitors-note strong { color: #334155; }
 
         .audit-list { margin-bottom: 8px; }
-        .audit-item { display: flex; align-items: flex-start; gap: 10px; padding: 8px 0; border-bottom: 1px solid #f1f5f9; font-size: 0.78rem; }
+        .audit-item { display: flex; align-items: flex-start; gap: 12px; padding: 8px 0; border-bottom: 1px solid #f1f5f9; font-size: 0.78rem; }
         .audit-item:last-child { border-bottom: none; }
-        .audit-icon { font-size: 1rem; flex-shrink: 0; }
-        .audit-title { font-weight: 600; color: #334155; min-width: 200px; flex-shrink: 0; word-break: break-word; overflow-wrap: break-word; }
+        .audit-icon { font-size: 1rem; flex-shrink: 0; padding-top: 2px; }
+        .audit-body { display: flex; flex-direction: column; gap: 2px; flex: 1; min-width: 0; }
+        .audit-title { font-weight: 600; color: #334155; }
         .audit-item.audit-fail .audit-title { color: #ef4444; }
-        .audit-desc { color: #64748b; font-size: 0.72rem; flex: 1; min-width: 0; }
+        .audit-desc { color: #64748b; font-size: 0.72rem; }
 
         .action-list { margin-bottom: 8px; }
         .action-item { display: flex; align-items: flex-start; gap: 8px; padding: 6px 0; border-bottom: 1px solid #f1f5f9; font-size: 0.78rem; color: #475569; }
@@ -701,9 +702,6 @@
             .features { grid-template-columns: 1fr; }
             .score-grid { grid-template-columns: 1fr; }
             .report-components { grid-template-columns: 1fr; }
-            .audit-item { flex-wrap: wrap; }
-            .audit-title { min-width: 0; flex-basis: 100%; }
-            .audit-icon { align-self: flex-start; }
             .highlight-stats { flex-direction: column; gap: 16px; }
             .highlight-divider { width: 48px; height: 1px; }
         }
@@ -860,68 +858,94 @@
                     <div class="audit-list">
                         <div class="audit-item audit-pass">
                             <span class="audit-icon">✅</span>
-                            <span class="audit-title">robots.txt allows crawling</span>
-                            <span class="audit-desc">Docs are accessible to AI crawlers</span>
+                            <div class="audit-body">
+                                <span class="audit-title">robots.txt allows crawling</span>
+                                <span class="audit-desc">Docs are accessible to AI crawlers</span>
+                            </div>
                         </div>
                         <div class="audit-item audit-pass">
                             <span class="audit-icon">✅</span>
-                            <span class="audit-title">OpenAPI / Swagger spec found</span>
-                            <span class="audit-desc">openapi.json detected at docs endpoint</span>
+                            <div class="audit-body">
+                                <span class="audit-title">OpenAPI / Swagger spec found</span>
+                                <span class="audit-desc">openapi.json detected at docs endpoint</span>
+                            </div>
                         </div>
                         <div class="audit-item audit-pass">
                             <span class="audit-icon">✅</span>
-                            <span class="audit-title">Code examples in 5+ languages</span>
-                            <span class="audit-desc">Python, Node.js, Go, Ruby, Java all present</span>
+                            <div class="audit-body">
+                                <span class="audit-title">Code examples in 5+ languages</span>
+                                <span class="audit-desc">Python, Node.js, Go, Ruby, Java all present</span>
+                            </div>
                         </div>
                         <div class="audit-item audit-pass">
                             <span class="audit-icon">✅</span>
-                            <span class="audit-title">SDK / client libraries</span>
-                            <span class="audit-desc">Official SDKs for Python, Node.js, Go</span>
+                            <div class="audit-body">
+                                <span class="audit-title">SDK / client libraries</span>
+                                <span class="audit-desc">Official SDKs for Python, Node.js, Go</span>
+                            </div>
                         </div>
                         <div class="audit-item audit-fail">
                             <span class="audit-icon">❌</span>
-                            <span class="audit-title">GitHub presence</span>
-                            <span class="audit-desc">No public SDK repository found</span>
+                            <div class="audit-body">
+                                <span class="audit-title">GitHub presence</span>
+                                <span class="audit-desc">No public SDK repository found</span>
+                            </div>
                         </div>
                         <div class="audit-item audit-fail">
                             <span class="audit-icon">❌</span>
-                            <span class="audit-title">Pricing page indexed</span>
-                            <span class="audit-desc">Pricing page blocked by meta robots noindex</span>
+                            <div class="audit-body">
+                                <span class="audit-title">Pricing page indexed</span>
+                                <span class="audit-desc">Pricing page blocked by meta robots noindex</span>
+                            </div>
                         </div>
                         <div class="audit-item audit-pass">
                             <span class="audit-icon">✅</span>
-                            <span class="audit-title">Sitemap.xml present</span>
-                            <span class="audit-desc">XML sitemap found and accessible</span>
+                            <div class="audit-body">
+                                <span class="audit-title">Sitemap.xml present</span>
+                                <span class="audit-desc">XML sitemap found and accessible</span>
+                            </div>
                         </div>
                         <div class="audit-item audit-fail">
                             <span class="audit-icon">❌</span>
-                            <span class="audit-title">Bing Webmaster Tools</span>
-                            <span class="audit-desc">Site not registered in Bing Webmaster</span>
+                            <div class="audit-body">
+                                <span class="audit-title">Bing Webmaster Tools</span>
+                                <span class="audit-desc">Site not registered in Bing Webmaster</span>
+                            </div>
                         </div>
                         <div class="audit-item audit-pass">
                             <span class="audit-icon">✅</span>
-                            <span class="audit-title">Schema.org markup</span>
-                            <span class="audit-desc">Structured data found on pages</span>
+                            <div class="audit-body">
+                                <span class="audit-title">Schema.org markup</span>
+                                <span class="audit-desc">Structured data found on pages</span>
+                            </div>
                         </div>
                         <div class="audit-item audit-pass">
                             <span class="audit-icon">✅</span>
-                            <span class="audit-title">H1 tag structure</span>
-                            <span class="audit-desc">Proper heading hierarchy detected</span>
+                            <div class="audit-body">
+                                <span class="audit-title">H1 tag structure</span>
+                                <span class="audit-desc">Proper heading hierarchy detected</span>
+                            </div>
                         </div>
                         <div class="audit-item audit-fail">
                             <span class="audit-icon">❌</span>
-                            <span class="audit-title">How-to guides</span>
-                            <span class="audit-desc">No how-to documentation found</span>
+                            <div class="audit-body">
+                                <span class="audit-title">How-to guides</span>
+                                <span class="audit-desc">No how-to documentation found</span>
+                            </div>
                         </div>
                         <div class="audit-item audit-pass">
                             <span class="audit-icon">✅</span>
-                            <span class="audit-title">Pricing schema</span>
-                            <span class="audit-desc">Pricing structured data detected</span>
+                            <div class="audit-body">
+                                <span class="audit-title">Pricing schema</span>
+                                <span class="audit-desc">Pricing structured data detected</span>
+                            </div>
                         </div>
                         <div class="audit-item audit-pass">
                             <span class="audit-icon">✅</span>
-                            <span class="audit-title">Changelog / release notes</span>
-                            <span class="audit-desc">Changelog found and regularly updated</span>
+                            <div class="audit-body">
+                                <span class="audit-title">Changelog / release notes</span>
+                                <span class="audit-desc">Changelog found and regularly updated</span>
+                            </div>
                         </div>
                     </div>
 
