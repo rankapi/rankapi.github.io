@@ -506,8 +506,8 @@
             margin-bottom: 2px;
         }
         .badge-card.is-founder .badge-name { color: #D97706; }
-        .badge-card.is-veteran .badge-name { color: #94a3b8; }
-        .badge-card.is-next .badge-name { color: var(--muted); }
+        .badge-card.is-pioneer .badge-name { color: #94a3b8; }
+        .badge-card.is-complete .badge-name { color: var(--muted); }
         .badge-multiplier {
             font-size: 0.65rem;
             color: var(--muted);
@@ -525,7 +525,8 @@
             margin-top: 4px;
         }
         .badge-founders .badge-name { color: #d97706; }
-        .badge-veterans .badge-name { color: #64748b; }
+        .badge-pioneers .badge-name { color: #64748b; }
+        .badge-complete .badge-name { color: #4B8BF5; }
 
         .guarantee-line { margin-top: 16px; font-size: 0.78rem; color: var(--muted); font-style: italic; }
 
@@ -722,7 +723,7 @@
     <section class="hero">
         <div class="hero-eyebrow">API Visibility Intelligence</div>
         <h1>Get your personalized<br><em>AI Visibility Report.</em></h1>
-        <p>Discover exactly how visible your API is across AI assistants like ChatGPT, Claude, Gemini, and Perplexity — and get a personalized report delivered in 48 hours. <strong style="color:#4B8BF5;">$99 founding price</strong> for the first 5 clients, then $149 for veterans and $224 after.</p>
+        <p>Discover exactly how visible your API is across AI assistants like ChatGPT, Claude, Gemini, and Perplexity — and get a personalized report delivered in 48 hours. <strong style="color:#4B8BF5;">$99 founding price</strong> for the first 5 clients, then $149 for pioneers and $224 for the rest.</p>
         <div class="hero-cta">
             <a href="#" class="btn-primary modal-trigger">Order your report — $99 founding price</a>
         </div>
@@ -1138,17 +1139,17 @@
                     <div class="badge-price">$99</div>
                     <div class="badge-desc">First 5 clients only</div>
                 </div>
-                <div class="badge-card badge-veterans is-veteran">
-                    <div class="badge-name">Veteran</div>
+                <div class="badge-card badge-pioneers is-veteran">
+                    <div class="badge-name">Pioneer</div>
                     <div class="badge-multiplier">1.5x price</div>
                     <div class="badge-price">$149</div>
                     <div class="badge-desc">Next 50 clients</div>
                 </div>
-                <div class="badge-card is-next">
-                    <div class="badge-name">Next</div>
+                <div class="badge-card">
+                    <div class="badge-name">Complete</div>
                     <div class="badge-multiplier">2.25x price</div>
                     <div class="badge-price">$224</div>
-                    <div class="badge-desc">Next 500 clients</div>
+                    <div class="badge-desc">All remaining clients</div>
                 </div>
             </div>
         </div>
@@ -1170,7 +1171,7 @@
         <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
         <div class="modal-form-wrap">
             <div class="modal-title">Get your AI Visibility Report</div>
-            <div class="modal-subtitle">$99 founding price for the first 5 clients — then $149 for veterans. Includes the <strong>Founder badge</strong> — permanent lowest price on all future RankAPI products, for life.</div>
+            <div class="modal-subtitle">$99 founding price for the first 5 clients — then $149 for pioneers. Includes the <strong>Founder badge</strong> — permanent lowest price on all future RankAPI products, for life.</div>
             <form id="auditForm" action="https://formspree.io/f/xbdqbyzb" method="POST" autocomplete="off">
                 <div class="form-group">
                     <label class="form-label" for="name">Your name</label>
