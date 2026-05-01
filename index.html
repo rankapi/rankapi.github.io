@@ -432,6 +432,42 @@
         }
         .value-calc strong { color: var(--text); }
 
+        .highlight-stats {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 32px;
+            margin-top: 20px;
+            padding: 18px 24px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+        }
+        .highlight-stat { text-align: center; }
+        .highlight-num {
+            font-family: 'Syne', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #4B8BF5;
+            line-height: 1;
+        }
+        .highlight-label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-top: 4px;
+        }
+        .highlight-sub {
+            font-size: 0.6rem;
+            color: var(--muted);
+            margin-top: 2px;
+        }
+        .highlight-divider {
+            width: 1px;
+            height: 48px;
+            background: var(--border);
+        }
+
         .badge-tiers {
             margin-top: 24px;
             border: 1px solid var(--border);
@@ -1034,6 +1070,19 @@
         </div>
         <div class="value-calc">
             <span>What manually researching this would cost: <strong>weeks</strong>. What it costs with RankAPI: <strong>$99</strong>.</span>
+        </div>
+        <div class="highlight-stats">
+            <div class="highlight-stat">
+                <div class="highlight-num">50</div>
+                <div class="highlight-label">Prompts Analyzed</div>
+                <div class="highlight-sub">Category · Comparison · Use-case</div>
+            </div>
+            <div class="highlight-divider"></div>
+            <div class="highlight-stat">
+                <div class="highlight-num">13</div>
+                <div class="highlight-label">Documentation & SEO Checks</div>
+                <div class="highlight-sub">OpenAPI · SDK · Schema · Sitemap</div>
+            </div>
         </div>
         <div class="bonus-stripe">
             <span class="bonus-star">★</span>
