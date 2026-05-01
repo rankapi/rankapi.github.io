@@ -701,7 +701,9 @@
             .features { grid-template-columns: 1fr; }
             .score-grid { grid-template-columns: 1fr; }
             .report-components { grid-template-columns: 1fr; }
-            .audit-title { min-width: 0; }
+            .audit-item { flex-wrap: wrap; }
+            .audit-title { min-width: 0; flex-basis: 100%; }
+            .audit-icon { align-self: flex-start; }
             .highlight-stats { flex-direction: column; gap: 16px; }
             .highlight-divider { width: 48px; height: 1px; }
         }
@@ -755,7 +757,7 @@
                     </div>
 
                     <!-- Title -->
-                    <div class="email-title">Platio Payments API</div>
+                    <div class="email-title">Your API</div>
                     <div class="email-subtitle">Visibility across Claude · ChatGPT · Gemini · Perplexity</div>
 
                     <!-- Score cards -->
@@ -938,7 +940,7 @@
                     <!-- AI-generated Insight -->
                     <div class="insight-box">
                         <div class="insight-label">💡 AI-generated Insight</div>
-                        <div class="insight-text">Platio performs well on pricing-sensitive queries like "cheapest payment API" and technical queries like "payment API with SEPA support". However, you're nearly invisible on subscription-billing queries where Stripe dominates. The biggest gap is your missing public SDK — AI models consistently cite GitHub presence as a trust signal. Publishing a single official SDK (Python is enough to start) would likely move your visibility score from 35% to above 50% within 30 days.</div>
+                        <div class="insight-text">Your API performs well on pricing-sensitive queries like "cheapest payment API" and technical queries like "payment API with SEPA support". However, you're nearly invisible on subscription-billing queries where Stripe dominates. The biggest gap is your missing public SDK — AI models consistently cite GitHub presence as a trust signal. Publishing a single official SDK (Python is enough to start) would likely move your visibility score from 35% to above 50% within 30 days.</div>
                     </div>
 
                     <div class="email-footer-bar">
